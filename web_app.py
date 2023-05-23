@@ -1,7 +1,6 @@
 import pickle
 import numpy as np
 import streamlit as st
-import streamlit_space
 
 model = pickle.load(open('model.pkl', 'rb'))
 
@@ -28,7 +27,6 @@ with col8:
     st.markdown("<h6 style='text-align: center;'>A simple web app to predict annual salary</h6>", unsafe_allow_html=True)
 with col9:
     st.write('')
-streamlit_space.space(lines=1)
 
 gen_list = ["Female", "Male"]
 edu_list = ["Bachelor's", "Master's", "PhD"]
@@ -36,15 +34,10 @@ job_list = ["Director of Marketing", "Director of Operations", "Senior Data Scie
 job_idx = [0, 1, 10, 11, 20]
 
 gender = st.radio('Pick your gender', gen_list)
-streamlit_space.space(lines=1)
 age = st.slider('Pick your age', 21, 55)
-streamlit_space.space(lines=1)
 education = st.selectbox('Pick your education level', edu_list)
-streamlit_space.space(lines=1)
 job = st.selectbox('Pick your job title', job_list)
-streamlit_space.space(lines=1)
 experience = st.slider('Pick your years of experience', 0.0, 25.0, 0.0, 0.5, "%1f")
-streamlit_space.space(lines=1)
 
 col10, col11, col12, col13, col14 = st.columns(5)
 with col10:
@@ -57,7 +50,6 @@ with col13:
     st.write('')
 with col14:
     st.write('')
-
 
 if(predict_btn):
     inp1 = int(age)
