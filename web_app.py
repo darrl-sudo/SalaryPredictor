@@ -52,7 +52,6 @@ with col14:
     st.write('')
 
 if(predict_btn):
-    if predict_btn:
      if model is None:
         st.error("Model not available. Please contact admin or reload after deployment.")
      else:
