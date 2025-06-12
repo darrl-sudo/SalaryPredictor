@@ -2,8 +2,8 @@ import pickle
 import numpy as np
 import streamlit as st
 
-model = pickle.load(open('model.pkl', 'rb'))
-
+#model = pickle.load(open('model.pkl', 'rb'))
+model = None
 col0, col1, col2, col3, col4, col5, col6 = st.columns(7)
 with col0:
     st.write('')
